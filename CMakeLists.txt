@@ -12,6 +12,9 @@ add_subdirectory(libs/DPP)
 #add_subdirectory(libs/spdlog) # if you need a logger. Don't forget to clone sources
 # in the `libs/` directory
 
+file(GLOB MY_FILES "src/*.txt")
+file(COPY ${MY_FILES} DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
 # Create an executable
 add_executable(${PROJECT_NAME}
         src/main.cpp
