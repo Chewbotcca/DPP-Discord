@@ -18,8 +18,9 @@ file(COPY ${MY_FILES} DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 # Create an executable
 add_executable(${PROJECT_NAME}
         src/main.cpp
-        # your others files...
-)
+        src/main.h)
+
+#include_directories("src/commands")
 
 # Linking libraries
 target_link_libraries(${PROJECT_NAME}
